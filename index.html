@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Леон С. Кеннеди Вики — Главная</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page">
+<body class="page" id="top">
 
   <!-- Шапка -->
   <header class="header">
@@ -15,128 +15,191 @@
         
       <!-- Лого -->
       <div class="logo">
-          <span class="logo__accent" aria-hidden="true"></span>
-            <div class="logo__text">
-                <span class="logo__title">Леон С. Кеннеди Вики</span>
-                <span class="logo__subtitle">О мужчине мечты всех женщин</span>
-            </div>
-        </div>
+          <img src="images/umbrella.webp" alt="Значок" class="logo__icon">
+          <div class="logo__text">
+              <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
+              <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
+          </div>
       </div>
 
-    <!-- Основная навигация -->
-    <nav class="main-navigation" aria-label="Основная навигация">
-      <ul class="main-navigation__list">
-        <li class="main-navigation__item"><a href="index.html" class="main-navigation__link main-navigation__link--active" aria-current="page">Главная</a></li>
-        <li class="main-navigation__item"><a href="biography.html" class="main-navigation__link">Биография</a></li>
-        <li class="main-navigation__item"><a href="costumes.html" class="main-navigation__link">Костюмы</a></li>
-        <li class="main-navigation__item"><a href="arsenal.html" class="main-navigation__link">Арсенал</a></li>
-        <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link">Отношения</a></li>
-      </ul>
-    </nav>
+      <!-- Основная навигация -->
+      <nav class="main-navigation" aria-label="Основная навигация">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item"><a href="index.html" class="main-navigation__link main-navigation__link--active" aria-current="page">Главная</a></li>
+          <li class="main-navigation__item"><a href="biography.html" class="main-navigation__link">Биография</a></li>
+          <li class="main-navigation__item"><a href="costumes.html" class="main-navigation__link">Костюмы</a></li>
+          <li class="main-navigation__item"><a href="arsenal.html" class="main-navigation__link">Арсенал</a></li>
+          <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link">Отношения</a></li>
+        </ul>
+      </nav>
+
     </div>
   </header>
 
   <main class="main-content">
 
-    <!-- Вступление -->
+    <!-- Вступление (Hero) -->
     <section class="introduction" id="intro">
-
-      <!-- <img src="images/leon-undressed.jpg" alt="фон с Леоном" class="introduction__background-image">
-      <div class="background__scrim"></div> -->
-
-      <!-- Блок вступления -->
       <div class="introduction-hero">
         <h1 class="character-hero__name">Леон Скотт Кеннеди</h1>
         <p class="character-hero__description">От начинающего полицейского до передовой борьбы с биотерроризмом. Узнайте о жизни, операциях и культовом снаряжении человека, пережившего все это.</p>
-        <a href="#archive" class="button button--primary">Узнать больше &rarr;</a>
+        <a href="#sections" class="button button--primary">Узнать больше &rarr;</a>
       </div>
     </section>
 
     <!-- Обзор персонажа -->
     <section class="character-overview" id="overview">
       <div class="character-overview__container">
-        <h2 class="character-overview__heading">Обзор персонажа</h2>
+        <div class="character-overview__info">
+          <h3 class="character-overview__subheading">01 / Выживший</h3>
+          <h2 class="character-overview__heading">Новобранец. Выживший. Агент.</h2>
+        </div>
         <div class="character-overview__body">
           <p class="character-overview__text">
-            Леон Скотт Кеннеди — американский агент спецслужб, бывший офицер полиции Раккун-Сити (R.P.D.), выживший в инциденте 1998 года.
+            Первый день Леона С. Кеннеди на службе в полиции превратился в борьбу за выживание в Раккун-Сити. В последующие годы он поступил на службу в правительство США, спас дочь президента и противостоял биотеррору по всему миру.
           </p>
+          <div class="character-overview__meta-grid">
+            <div class="character-overview__meta-item">
+              <span class="meta-label">Принадлежность</span>
+              <span class="meta-value">R.P.D., D.S.O.</span>
+            </div>
+            <div class="character-overview__meta-item">
+              <span class="meta-label">Появление</span>
+              <span class="meta-value">Resident Evil 2</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Навигационные карточки -->
     <section class="main-sections" id="sections">
-      <h2 class="main-sections__heading">Основные разделы</h2>
+      <div class="main-sections__header">
+        <h2 class="main-sections__heading">Четыре пути в историю</h2>
+      </div>
 
-      <!-- Карточка биография -->
-        <article class="section-card">
-          <div class="section-card__artwork"></div>
-            <img src="images/biography.png" class="section-card__image">
+      <div class="main-sections__grid">
+        <!-- Карточка биография -->
+        <a href="biography.html" class="section-card">
+          <div class="section-card__artwork">
+            <img src="images/biography.png" alt="Биография" class="section-card__image">
             <div class="section-card__scrim" aria-hidden="true"></div>
             <div class="section-card__title-wrapper">
-                <h3 class="section-card__title">Биография</h3>
-                <a href="biography.html" class="section-card__arrow-link" aria-label="Открыть биографию">
-                    <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
-                </a>
+              <h3 class="section-card__title">Биография</h3>
+              <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
+            </div>
           </div>
-          <p class="section-card__summary">От Раккун-Сити до D.S.O.</p>
-        </article>
+          <div class="section-card__content">
+            <p class="section-card__summary">От Раккун-Сити до D.S.O.</p>
+          </div>
+        </a>
 
-      <!-- Карточка костюмы -->
-      <article class="section-card">
-          <div class="section-card__artwork"></div>
-            <img src="images/costumes.png" class="section-card__image">
+        <!-- Карточка костюмы -->
+        <a href="costumes.html" class="section-card">
+          <div class="section-card__artwork">
+            <img src="images/costumes.png" alt="Костюмы" class="section-card__image">
             <div class="section-card__scrim" aria-hidden="true"></div>
             <div class="section-card__title-wrapper">
-                <h3 class="section-card__title">Костюмы</h3>
-                <a href="costumes.html" class="section-card__arrow-link" aria-label="Открыть костюмы">
-                    <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
-                </a>
+              <h3 class="section-card__title">Костюмы</h3>
+              <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
+            </div>
           </div>
-          <p class="section-card__summary">Стиль и экипировка Леона</p>
-        </article>
+          <div class="section-card__content">
+            <p class="section-card__summary">Юниформа, куртки и альтернативные образы</p>
+          </div>
+        </a>
 
         <!-- Карточка арсенал -->
-        <article class="section-card">
-            <div class="section-card__artwork"></div>
-                <img src="images/arsenal.png" class="section-card__image">
-                <div class="section-card__scrim" aria-hidden="true"></div>
-                <div class="section-card__title-wrapper">
-                    <h3 class="section-card__title">Арсенал</h3>
-                    <a href="arsenal.html" class="section-card__arrow-link" aria-label="Открыть арсенал">
-                        <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
-                    </a>
+        <a href="arsenal.html" class="section-card">
+          <div class="section-card__artwork">
+            <img src="images/arsenal.png" alt="Арсенал" class="section-card__image">
+            <div class="section-card__scrim" aria-hidden="true"></div>
+            <div class="section-card__title-wrapper">
+              <h3 class="section-card__title">Арсенал</h3>
+              <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
             </div>
-            <p class="section-card__summary">Личное оружие и прочее снаряжение</p>
-            </article>
+          </div>
+          <div class="section-card__content">
+            <p class="section-card__summary">Личное оружие и снаряжение</p>
+          </div>
+        </a>
 
         <!-- Карточка отношения -->
-        <article class="section-card">
-            <div class="section-card__artwork"></div>
-                <img src="images/relationships.png" class="section-card__image">
-                <div class="section-card__scrim" aria-hidden="true"></div>
-                <div class="section-card__title-wrapper">
-                    <h3 class="section-card__title">Отношения</h3>
-                    <a href="relationships.html" class="section-card__arrow-link" aria-label="Открыть отношения">
-                        <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
-                    </a>
+        <a href="relationships.html" class="section-card">
+          <div class="section-card__artwork">
+            <img src="images/relationships.png" alt="Отношения" class="section-card__image">
+            <div class="section-card__scrim" aria-hidden="true"></div>
+            <div class="section-card__title-wrapper">
+              <h3 class="section-card__title">Отношения</h3>
+              <span class="section-card__arrow" aria-hidden="true">&nearr;</span>
             </div>
-            <p class="section-card__summary">Личные связи и взаимодействия с другими персонажами</p>
-            </article>
-
+          </div>
+          <div class="section-card__content">
+            <p class="section-card__summary">Люди, которые повлияли на его историю</p>
+          </div>
+        </a>
+      </div>
     </section>
 
   </main>
 
   <!-- Подвал -->
   <footer class="footer" id="footer">
-  <div class="footer__container">
-    <p class="footer__text">
-      Неофициальная вики-страница для фанатов серии игр «Resident Evil». Не связана с компанией Capcom и не одобрена ею. Права на «Resident Evil», её персонажей и сопутствующие изображения принадлежат компании Capcom.
-    </p>
-    <span class="footer__copy">&copy; 2026 ЛЕОН С. КЕННЕДИ ВИКИ. ФАН ВЕРСИЯ.</span>
-  </div>
-</footer>
+    <div class="footer__container">
+      <div class="footer__brand-block">
+        <div class="logo footer__logo" aria-label="Логотип сайта">
+          <img src="images/umbrella.webp" alt="Логотип Леон С. Кеннеди Вики" class="logo__icon">
+          <div class="logo__text">
+            <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
+            <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
+          </div>
+        </div>
+        <p class="footer__description">
+          Неформальная фан-энциклопедия по серии игр Resident Evil. Не связана с Capcom и не поддерживается ею.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Навигация по сайту">
+        <a href="index.html">Главная</a>
+        <a href="biography.html">Биография</a>
+        <a href="costumes.html">Костюмы</a>
+        <a href="arsenal.html">Арсенал</a>
+        <a href="relationships.html">Отношения</a>
+      </nav>
+
+      <div class="footer__contacts" aria-label="Контакты">
+        <div class="footer__contact">
+          <span class="footer__icon" aria-hidden="true">☎</span>
+          <span>+7 (916) 555-11-22</span>
+        </div>
+        <div class="footer__contact">
+          <span class="footer__icon" aria-hidden="true">✉</span>
+          <span>leonwiki@fake-mail.ru</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 LEON S. KENNEDY WIKI. FAN-MADE ARCHIVE.</span>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top-button" aria-label="Наверх">↑</a>
+
+  <script>
+    const scrollTopButton = document.querySelector('.scroll-top-button');
+
+    const toggleScrollButton = () => {
+      if (window.scrollY > 300) {
+        scrollTopButton.classList.add('visible');
+      } else {
+        scrollTopButton.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleScrollButton);
+    toggleScrollButton();
+  </script>
 
 </body>
 </html>
