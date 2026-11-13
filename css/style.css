@@ -14,9 +14,8 @@ body.page {
 
 /* ШАПКА (HEADER) */
 .header {
-  position: relative;
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 10;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -546,5 +545,667 @@ body.page {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+}
+
+/* БИОГРАФИЯ И ХРОНОЛОГИЯ */
+.biography-hero {
+  position: relative;
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  padding: 48px 40px;
+  background:
+    linear-gradient(90deg, rgba(8, 19, 33, 0.98) 0%, rgba(8, 19, 33, 0.86) 44%, rgba(8, 19, 33, 0.35) 100%),
+    linear-gradient(0deg, rgba(8, 19, 33, 0.75), transparent 70%),
+    url('../images/re4_background.png') no-repeat center 42% / cover;
+}
+
+.biography-hero__content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.biography-hero__eyebrow,
+.biography-next__eyebrow {
+  display: block;
+  margin-bottom: 10px;
+  color: #e50914;
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.biography-hero__title {
+  max-width: 760px;
+  margin-bottom: 12px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.biography-hero__description {
+  max-width: 570px;
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.biography-timeline {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 40px 20px;
+}
+
+.timeline-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.timeline-entry::before {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 157px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  content: "";
+}
+
+.timeline-entry__date {
+  padding-top: 20px;
+}
+
+.timeline-entry__year {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.timeline-entry__year--range {
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+}
+
+.timeline-entry__era {
+  margin-top: 10px;
+  color: #737373;
+  font-family: monospace;
+  font-size: 0.58rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.timeline-card {
+  position: relative;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #0b192a;
+}
+
+.timeline-card::before {
+  position: absolute;
+  top: 20px;
+  left: -16px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #737373;
+  background-color: #081321;
+  content: "";
+}
+
+.timeline-entry:first-child .timeline-card::before {
+  border-color: #e50914;
+  background-color: #e50914;
+}
+
+.timeline-card__summary {
+  display: block;
+  padding: 18px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.timeline-card__summary::-webkit-details-marker {
+  display: none;
+}
+
+.timeline-card__preview {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 30%);
+  gap: 24px;
+  align-items: center;
+}
+
+.timeline-card__text {
+  min-width: 0;
+}
+
+.timeline-card__location {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 4px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #b3b3b3;
+  font-family: monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.timeline-card__location::before {
+  margin-right: 6px;
+  color: #e50914;
+  content: "◉";
+}
+
+.timeline-card__title {
+  margin-bottom: 8px;
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.timeline-card__description {
+  max-width: 660px;
+  margin-bottom: 9px;
+  color: #b3b3b3;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.timeline-card__game {
+  color: #737373;
+  font-family: monospace;
+  font-size: 0.56rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.timeline-card__image {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.timeline-card__toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  color: #d8d8d8;
+  font-family: monospace;
+  font-size: 0.58rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.timeline-card__toggle::after {
+  color: #b3b3b3;
+  content: "⌄";
+  font-size: 0.9rem;
+}
+
+.timeline-card[open] .timeline-card__toggle {
+  color: #e50914;
+}
+
+.timeline-card[open] .timeline-card__toggle::after {
+  color: #e50914;
+  content: "⌃";
+}
+
+.timeline-card__details {
+  padding: 16px 18px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #0b192a;
+}
+
+.timeline-card__details-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 13px;
+  color: #e50914;
+  font-family: monospace;
+  font-size: 0.58rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.timeline-card__details-heading h4 {
+  font: inherit;
+}
+
+.timeline-card__details-heading span {
+  color: #737373;
+}
+
+.timeline-card__details > p {
+  margin-bottom: 16px;
+  color: #b3b3b3;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.timeline-card__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.timeline-card__facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #d8d8d8;
+  font-size: 0.72rem;
+}
+
+.timeline-card__fact-label {
+  color: #737373;
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.biography-next {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 28px 0 42px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.biography-next__eyebrow {
+  margin-bottom: 6px;
+}
+
+.biography-next__title {
+  font-size: 1.55rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.biography-next__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 0.7rem;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.biography-next__link:hover {
+  border-color: #e50914;
+  color: #e50914;
+}
+
+.biography-next__link span {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .biography-hero {
+    min-height: 250px;
+    padding: 40px 20px;
+    background-position: 58% center;
+  }
+
+  .biography-timeline {
+    padding: 24px 20px 10px;
+  }
+
+  .timeline-entry {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .timeline-entry::before {
+    left: 91px;
+  }
+
+  .timeline-entry__date {
+    padding-top: 16px;
+  }
+
+  .timeline-card__summary {
+    padding: 14px;
+  }
+
+  .timeline-card__preview {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .timeline-card__image {
+    height: 170px;
+    grid-row: 1;
+  }
+
+  .timeline-card__details {
+    padding: 14px;
+  }
+
+  .biography-next {
+    margin: 0 20px;
+    padding: 24px 0 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .timeline-entry::before {
+    display: none;
+  }
+
+  .timeline-entry__date {
+    padding: 0 0 8px;
+  }
+
+  .timeline-entry__year,
+  .timeline-entry__year--range {
+    font-size: 1.45rem;
+  }
+
+  .timeline-entry__era {
+    margin-top: 4px;
+  }
+
+  .timeline-card::before {
+    top: -22px;
+    left: 0;
+  }
+
+  .timeline-card__facts {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timeline-card__details-heading {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* КОСТЮМЫ */
+.costumes-hero {
+  position: relative;
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  padding: 48px 40px;
+  background:
+    linear-gradient(90deg, rgba(8, 19, 33, 0.98) 0%, rgba(8, 19, 33, 0.82) 48%, rgba(8, 19, 33, 0.2) 100%),
+    linear-gradient(0deg, rgba(8, 19, 33, 0.8), transparent 70%),
+    url("../images/Leather and tactical detail.png") no-repeat center 52% / cover;
+}
+
+.costumes-hero__content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.costumes-hero__eyebrow {
+  margin-bottom: 10px;
+  color: #e50914;
+  font-family: monospace;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.costumes-hero__title {
+  max-width: 760px;
+  margin-bottom: 12px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.costumes-hero__description {
+  max-width: 570px;
+  color: #b3b3b3;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.costume-collection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px 40px 42px;
+}
+
+.costume-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.costume-filters__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #a6a6a6;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.75rem;
+  letter-spacing: 0.4px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.costume-filters__button span {
+  color: #737373;
+  font-family: monospace;
+  font-size: 0.65rem;
+}
+
+.costume-filters__button:hover {
+  color: #ffffff;
+}
+
+.costume-filters__button.is-active {
+  border-color: #e50914;
+  background: #e50914;
+  color: #ffffff;
+}
+
+.costume-filters__button.is-active span {
+  color: #ffffff;
+}
+
+.costume-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 24px;
+  row-gap: 28px;
+}
+
+.costume-card {
+  min-width: 0;
+  color: #ffffff;
+}
+
+.costume-card__image-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1.05;
+  overflow: hidden;
+  background: #102036;
+}
+
+.costume-card__image-wrap::after {
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(8, 19, 33, 0.76));
+  content: "";
+  pointer-events: none;
+}
+
+.costume-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.costume-card:hover .costume-card__image {
+  transform: scale(1.04);
+}
+
+.costume-card__badge,
+.costume-card__year,
+.costume-card__zoom {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+}
+
+.costume-card__badge {
+  left: 12px;
+  padding: 5px 7px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 19, 33, 0.7);
+  font-family: monospace;
+  font-size: 0.55rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.costume-card__year {
+  right: 12px;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.6px;
+}
+
+.costume-card__zoom {
+  top: auto;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(8, 19, 33, 0.6);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.costume-card__content {
+  padding: 14px 0 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.costume-card__game {
+  margin-bottom: 8px;
+  color: #e50914;
+  font-family: monospace;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.costume-card__title {
+  margin-bottom: 8px;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.costume-card__description {
+  color: #b3b3b3;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.costume-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+  color: #8c8c8c;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.costume-note__icon {
+  display: inline-grid;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  border: 1px solid #e50914;
+  border-radius: 50%;
+  color: #e50914;
+  font-family: serif;
+  font-size: 0.65rem;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .costume-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .costumes-hero {
+    min-height: 250px;
+    padding: 40px 20px;
+    background-position: 58% center;
+  }
+
+  .costume-collection {
+    padding: 24px 20px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .costume-grid {
+    grid-template-columns: 1fr;
+    row-gap: 22px;
+  }
+
+  .costume-card__image-wrap {
+    aspect-ratio: 1 / 0.9;
+  }
+
+  .biography-next {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
