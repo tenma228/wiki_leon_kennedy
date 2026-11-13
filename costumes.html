@@ -3,37 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Леон С. Кеннеди Вики — Главная</title>
+  <title>Леон С. Кеннеди Вики — Костюмы</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page">
-
-  <!-- Шапка -->
+<body class="page" id="top">
   <header class="header">
     <div class="header__container">
-        
-      <!-- Лого -->
       <div class="logo">
-          <img src="images/umbrella.webp" alt="Значок" class="logo__icon">
-          <div class="logo__text">
-              <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
-              <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
-          </div>
+        <img src="images/umbrella-logo.png" alt="Значок" class="logo__icon">
+        <div class="logo__text">
+          <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
+          <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
+        </div>
       </div>
 
-      <!-- Основная навигация -->
       <nav class="main-navigation" aria-label="Основная навигация">
         <ul class="main-navigation__list">
-          <li class="main-navigation__item"><a href="index.html" class="main-navigation__link main-navigation__link--active" aria-current="page">Главная</a></li>
+          <li class="main-navigation__item"><a href="index.html" class="main-navigation__link">Главная</a></li>
           <li class="main-navigation__item"><a href="biography.html" class="main-navigation__link">Биография</a></li>
-          <li class="main-navigation__item"><a href="costumes.html" class="main-navigation__link">Костюмы</a></li>
+          <li class="main-navigation__item"><a href="costumes.html" class="main-navigation__link main-navigation__link--active" aria-current="page">Костюмы</a></li>
           <li class="main-navigation__item"><a href="arsenal.html" class="main-navigation__link">Арсенал</a></li>
           <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link">Отношения</a></li>
         </ul>
       </nav>
-
     </div>
   </header>
+
+  <main class="main-content">
+    <section class="costumes-hero" aria-labelledby="costumes-title">
+      <div class="costumes-hero__content">
+        <p class="costumes-hero__eyebrow">Гардероб / архив образов</p>
+        <h1 class="costumes-hero__title" id="costumes-title">Костюмы и одежда</h1>
+        <p class="costumes-hero__description">
+          От полицейской формы до куртки агента. Знаковые образы Леона и альтернативные варианты экипировки.
+        </p>
+      </div>
+    </section>
+
+    <section class="costume-collection" aria-label="Коллекция костюмов Леона">
+      <div class="costume-filters" role="group" aria-label="Фильтр костюмов">
+        <button class="costume-filters__button is-active" type="button" data-filter="all" aria-pressed="true">Все образы <span>06</span></button>
+        <button class="costume-filters__button" type="button" data-filter="story" aria-pressed="false">Сюжетные <span>04</span></button>
+        <button class="costume-filters__button" type="button" data-filter="alternate" aria-pressed="false">Альтернативные <span>02</span></button>
+      </div>
+
+      <div class="costume-grid">
+        <article class="costume-card" data-category="story">
+          <div class="costume-card__image-wrap costume-card__image-wrap--portrait">
+            <img class="costume-card__image costume-card__image--render" src="images/Leon_Kennedy_render_RE2_(2019).webp" alt="Леон в форме полицейского управления Раккун-Сити">
+            <span class="costume-card__badge">Сюжетный</span>
+            <span class="costume-card__year">1998</span>
+          </div>
+          <div class="costume-card__content">
+            <p class="costume-card__game">Resident Evil 2 / 1998</p>
+            <h2 class="costume-card__title">Форма Р.П.Д.</h2>
+            <p class="costume-card__description">Защитная форма, пояс с экипировкой и знак новобранца.</p>
+          </div>
+        </article>
+
+        <article class="costume-card" data-category="story">
+          <div class="costume-card__image-wrap costume-card__image-wrap--portrait">
+            <img class="costume-card__image costume-card__image--render" src="images/RE4R_Leon_Render.webp" alt="Леон в кожаной куртке с овчинным воротником">
+            <span class="costume-card__badge">Сюжетный</span>
+            <span class="costume-card__year">2004</span>
+          </div>
+          <div class="costume-card__content">
+            <p class="costume-card__game">Resident Evil 4 / 2004</p>
+            <h2 class="costume-card__title">Куртка с овчиной</h2>
+            <p class="costume-card__description">Потёртая кожаная куртка — узнаваемый образ агента в Испании.</p>
+          </div>
+        </article>
+
+        <article class="costume-card" data-category="story">
+          <div class="costume-card__image-wrap costume-card__image-wrap--portrait costume-card__image-wrap--transparent">
+            <img class="costume-card__image costume-card__image--render costume-card__image--transparent" src="images/tactic_shirt_full.png" alt="Леон в тактической футболке и экипировке">
+            <span class="costume-card__badge">Сюжетный</span>
+            <span class="costume-card__year">2004</span>
+          </div>
+          <div class="costume-card__content">
+            <p class="costume-card__game">Resident Evil 4 / 2004</p>
+            <h2 class="costume-card__title">Тактическая футболка</h2>
+            <p class="costume-card__description">Лёгкая экипировка для миссии, где важны скорость и свобода движений.</p>
+          </div>
+        </article>
+
+        <article class="costume-card" data-category="story">
+          <div class="costume-card__image-wrap costume-card__image-wrap--portrait costume-card__image-wrap--transparent">
+            <img class="costume-card__image costume-card__image--render costume-card__image--transparent" src="images/leon re6.png" alt="Леон в полевой куртке из Resident Evil 6">
+            <span class="costume-card__badge">Сюжетный</span>
+            <span class="costume-card__year">2013</span>
+          </div>
+          <div class="costume-card__content">
+            <p class="costume-card__game">Resident Evil 6 / 2013</p>
+            <h2 class="costume-card__title">Полевая куртка</h2>
+            <p class="costume-card__description">Практичный многослойный образ для долгих операций.</p>
+          </div>
+        </article>
+
+        <article class="costume-card" data-category="alternate">
+          <div class="costume-card__image-wrap costume-card__image-wrap--portrait costume-card__image-wrap--transparent">
+            <img class="costume-card__image costume-card__image--render costume-card__image--transparent" src="images/striped_suit_full.png" alt="Леон в костюме в тонкую полоску">
+            <span class="costume-card__badge">Альтернативный</span>
+            <span class="costume-card__year">Альт.</span>
+          </div>
+          <div class="costume-card__content">
+            <p class="costume-card__game">Resident Evil 4 / 2005</p>
+            <h2 class="costume-card__title">В тонкую полоску</h2>
+            <p class="costume-card__description">Строгий костюм в духе старых гангстерских фильмов.</p>
+          </div>
+        </article>
+
+        <article class="costume-card" data-category="alternate">
+          <div class="costume-card__image-wrap costume-card__image-wrap--portrait costume-card__image-wrap--transparent">
+            <img class="costume-card__image costume-card__image--render costume-card__image--transparent" src="images/noir_detective_full.png" alt="Леон в нуарном костюме">
+            <span class="costume-card__badge">Альтернативный</span>
+            <span class="costume-card__year">Альт.</span>
+          </div>
+          <div class="costume-card__content">
+            <p class="costume-card__game">Resident Evil 4 / 2005</p>
+            <h2 class="costume-card__title">Детектив-нуар</h2>
+            <p class="costume-card__description">Рубашка, подтяжки и строгий силуэт в нуарном стиле.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="costume-note">
+        <span class="costume-note__icon" aria-hidden="true">i</span>
+        Внешний вид костюмов может отличаться в зависимости от версии игры. Альтернативные образы не всегда входят в основной сюжет.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <div class="footer__brand-block">
+        <div class="logo footer__logo" aria-label="Логотип сайта">
+          <img src="images/umbrella-logo.png" alt="Логотип Леон С. Кеннеди Вики" class="logo__icon">
+          <div class="logo__text">
+            <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
+            <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
+          </div>
+        </div>
+        <p class="footer__description">
+          Неформальная фан-энциклопедия по серии игр Resident Evil. Не связана с Capcom и не поддерживается ею.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Навигация по сайту">
+        <a href="index.html">Главная</a>
+        <a href="biography.html">Биография</a>
+        <a href="costumes.html">Костюмы</a>
+        <a href="arsenal.html">Арсенал</a>
+        <a href="relationships.html">Отношения</a>
+      </nav>
+
+      <div class="footer__contacts" aria-label="Контакты">
+        <div class="footer__contact">
+          <span class="footer__icon" aria-hidden="true">☎</span>
+          <span>+7 (916) 555-11-22</span>
+        </div>
+        <div class="footer__contact">
+          <span class="footer__icon" aria-hidden="true">✉</span>
+          <span>leonwiki@fake-mail.ru</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 LEON S. KENNEDY WIKI. FAN-MADE ARCHIVE.</span>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top-button" aria-label="Наверх">↑</a>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.costume-filters__button');
+    const costumeCards = document.querySelectorAll('.costume-card');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((filterButton) => {
+          const isActive = filterButton === button;
+          filterButton.classList.toggle('is-active', isActive);
+          filterButton.setAttribute('aria-pressed', String(isActive));
+        });
+
+        costumeCards.forEach((card) => {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
+      });
+    });
+
+    const scrollTopButton = document.querySelector('.scroll-top-button');
+    const toggleScrollButton = () => {
+      scrollTopButton.classList.toggle('visible', window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', toggleScrollButton);
+    toggleScrollButton();
+  </script>
 </body>
 </html>

@@ -1064,6 +1064,14 @@ body.page {
   background: #102036;
 }
 
+.costume-card__image-wrap--portrait {
+  aspect-ratio: 2 / 3;
+}
+
+.costume-card__image-wrap--transparent {
+  background: radial-gradient(ellipse at center 38%, #25303a, #081321 72%);
+}
+
 .costume-card__image-wrap::after {
   position: absolute;
   inset: 45% 0 0;
@@ -1077,6 +1085,16 @@ body.page {
   height: 100%;
   object-fit: cover;
   transition: transform 0.45s ease;
+}
+
+.costume-card__image--render {
+  object-fit: contain;
+  object-position: center bottom;
+  background: radial-gradient(ellipse at center 38%, #25303a, #081321 72%);
+}
+
+.costume-card__image--transparent {
+  background: transparent;
 }
 
 .costume-card:hover .costume-card__image {
@@ -1200,7 +1218,7 @@ body.page {
     row-gap: 22px;
   }
 
-  .costume-card__image-wrap {
+  .costume-card__image-wrap:not(.costume-card__image-wrap--portrait) {
     aspect-ratio: 1 / 0.9;
   }
 
