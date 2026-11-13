@@ -1,2 +1,46 @@
-# wiki_leon_kennedy
-A multi-page dark survival-horror fan wiki dedicated to Leon S. Kennedy from the Resident Evil series, featuring a biography timeline, costume gallery, tactical arsenal catalog, and interactive character relationships.
+# Леон С. Кеннеди | Вики
+
+## Описание
+
+Проект выполняется в рамках дисциплины «Фронтенд и бэкенд разработка».
+
+Тема проекта: многостраничная вики-энциклопедия о персонаже Леоне С. Кеннеди из серии Resident Evil.
+
+## Структура проекта
+
+- `index.html` — главная страница с обзором персонажа;
+- `biography.html` — биография и хронология жизни Леона С. Кеннеди;
+- `costumes.html` — страницы с костюмами и образами персонажа;
+- `arsenal.html` — каталог оружия и снаряжения;
+- `relationships.html` — раздел об отношениях и важных персонажах;
+- `css/style.css` — файл стилей;
+- `images/` — папка с изображениями и графикой;
+- `README.md` — описание проекта;
+- `.gitignore` — список файлов, исключённых из Git.
+
+## Используемые технологии
+
+- HTML;
+- CSS;
+- JavaScript;
+- Git;
+- GitHub.
+
+## Реализованные элементы интерфейса
+
+- многостраничная структура сайта;
+- фиксированная шапка с навигацией;
+- hero-блок с основной информацией о персонаже;
+- карточки разделов с визуальными обложками;
+- адаптивная верстка под разные размеры экрана;
+- единый dark-стиль в духе survival-horror.
+
+## Автор
+
+ФИО: Балаченкова Надежда Викторовна  
+Группа: ЭФБО-02-25
+
+## Ссылка на опубликованный проект
+
+GitHub Pages: https://tenma228.github.io/wiki_leon_kennedy/
+
