@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="page" id="top">
+<body class="page page--home" id="top">
 
   <!-- Шапка -->
   <header class="header">
@@ -52,23 +52,26 @@
     <section class="character-overview" id="overview">
       <div class="character-overview__container">
         <div class="character-overview__info">
-          <h3 class="character-overview__subheading">01 / Выживший</h3>
-          <h2 class="character-overview__heading">Новобранец. Выживший. Агент.</h2>
+          <h2 class="character-overview__heading">Самый крутой коп Раккун-Сити: от новичка с похмелья до символа Resident Evil</h2>
         </div>
         <div class="character-overview__body">
-          <p class="character-overview__text">
-            Первый день Леона С. Кеннеди на службе в полиции превратился в борьбу за выживание в Раккун-Сити. В последующие годы он поступил на службу в правительство США, спас дочь президента и противостоял биотеррору по всему миру.
-          </p>
-          <div class="character-overview__meta-grid">
-            <div class="character-overview__meta-item">
-              <span class="meta-label">Принадлежность</span>
-              <span class="meta-value">R.P.D., D.S.O.</span>
-            </div>
-            <div class="character-overview__meta-item">
-              <span class="meta-label">Появление</span>
-              <span class="meta-value">Resident Evil 2</span>
-            </div>
+          <div class="character-overview__copy">
+            <p class="character-overview__text">
+              За почти три десятилетия серия Resident Evil прошла путь от камерного хоррора в особняке до масштабного боевика с мировыми заговорами. И главным лицом этой эволюции стал Леон Скотт Кеннеди — любимчик фанатов, обладатель идеальной чёлки, фанат мотоциклов и человек с самой плохой удачей на первый рабочий день.
+            </p>
+            <p class="character-overview__text">
+              Когда в 1998 году Хидэки Камия придумывал героя для Resident Evil 2, ему требовалась полная противоположность суровому Крису Редфилду. Так на свет появился вчерашний выпускник академии, который приехал в Раккун-Сити выписывать штрафы за парковку, а вместо этого за одну ночь прошёл курс выживания среди мутантов.
+            </p>
+            <p class="character-overview__text">
+              С тех пор Леон заглянул более чем в пятнадцать игр, фильмов и новелл, сменил полицейский значок на удостоверение секретного агента США и научился отбивать бензопилы ножом. Этот архив — подробный разбор того, как обычный парень в синей форме превратился в легенду индустрии.
+            </p>
           </div>
+          <ul class="character-overview__facts">
+            <li><strong>Дебют:</strong> Resident Evil 2 (1998)</li>
+            <li><strong>Создатели:</strong> Хидэки Камия и Исао Оиси</li>
+            <li><strong>Появлений во франшизе:</strong> 15+ игр, фильмов и книг</li>
+            <li><strong>Статус:</strong> Спецагент D.S.O.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -76,7 +79,7 @@
     <!-- Навигационные карточки -->
     <section class="main-sections" id="sections">
       <div class="main-sections__header">
-        <h2 class="main-sections__heading">Четыре пути в историю</h2>
+        <h2 class="main-sections__heading">Всё о Леоне Кеннеди</h2>
       </div>
 
       <div class="main-sections__grid">
@@ -168,20 +171,21 @@
         <a href="relationships.html">Отношения</a>
       </nav>
 
-      <div class="footer__contacts" aria-label="Контакты">
-        <div class="footer__contact">
-          <span class="footer__icon" aria-hidden="true">☎</span>
-          <span>+7 (916) 555-11-22</span>
-        </div>
-        <div class="footer__contact">
-          <span class="footer__icon" aria-hidden="true">✉</span>
-          <span>leonwiki@fake-mail.ru</span>
+      <div class="footer__contacts">
+        <p class="footer__contact-prompt">Нашли неточность или есть идея?<br>Пишите — дополним архив вместе</p>
+        <div class="footer__social-links" aria-label="Социальные сети">
+          <a class="footer__social-link" href="https://telegram.org/" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3.2 18.6 20c-.3 1.2-1 1.5-2 .9l-5.5-4.1-2.7 2.6c-.3.3-.6.6-1.2.6l.4-5.6L18 6.1c.4-.4-.1-.6-.6-.2L5.1 13.6l-5.3-1.7c-1.2-.4-1.2-1.2.3-1.8L20.8 2c1-.4 1.8.2 1.2 1.2Z"/></svg>
+          </a>
+          <a class="footer__social-link footer__social-link--vk" href="https://vk.com/" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.1 18.5c-6.8 0-10.7-4.7-10.9-12.5h3.4c.1 5.7 2.6 8.1 4.5 8.6V6h3.2v4.9c1.9-.2 3.9-2.4 4.6-4.9h3.2c-.5 3.1-2.7 5.3-4.2 6.2 1.5.7 4 2.6 4.9 6.3h-3.5c-.7-2.4-2.5-4.2-5-4.5v4.5h-.2Z"/></svg>
+          </a>
         </div>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <span class="footer__copy">&copy; 2026 LEON S. KENNEDY WIKI. FAN-MADE ARCHIVE.</span>
+      <span class="footer__copy">&copy; 2026 НЕКОММЕРЧЕСКИЙ ФАН-АРХИВ ПО ВСЕЛЕННОЙ RESIDENT EVIL</span>
     </div>
   </footer>
 

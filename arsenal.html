@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Леон С. Кеннеди Вики — Арсенал</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page page--interior" id="top">
+  <header class="header">
+    <div class="header__container">
+      <div class="logo">
+        <img src="images/umbrella-logo.png" alt="Значок" class="logo__icon">
+        <div class="logo__text">
+          <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
+          <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
+        </div>
+      </div>
+
+      <nav class="main-navigation" aria-label="Основная навигация">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item"><a href="index.html" class="main-navigation__link">Главная</a></li>
+          <li class="main-navigation__item"><a href="biography.html" class="main-navigation__link">Биография</a></li>
+          <li class="main-navigation__item"><a href="costumes.html" class="main-navigation__link">Костюмы</a></li>
+          <li class="main-navigation__item"><a href="arsenal.html" class="main-navigation__link main-navigation__link--active" aria-current="page">Арсенал</a></li>
+          <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link">Отношения</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="arsenal-hero" aria-labelledby="arsenal-title">
+      <div class="arsenal-hero__content">
+        <p class="arsenal-hero__eyebrow">Снаряжение Леона / Resident Evil</p>
+        <h1 class="arsenal-hero__title" id="arsenal-title">Арсенал</h1>
+        <p class="arsenal-hero__description">
+          Восемь ключевых единиц оружия из миссии в Испании: от верного стартового пистолета до ножа, проверенного в бою.
+        </p>
+      </div>
+    </section>
+
+    <div class="arsenal-collection" aria-label="Арсенал Леона">
+      <div class="costume-filters arsenal-filters" role="group" aria-label="Фильтр оружия">
+        <button class="costume-filters__button is-active" type="button" data-filter="all" aria-pressed="true">Всё оружие</button>
+        <button class="costume-filters__button" type="button" data-filter="handguns" aria-pressed="false">Пистолеты</button>
+        <button class="costume-filters__button" type="button" data-filter="shotguns" aria-pressed="false">Дробовики</button>
+        <button class="costume-filters__button" type="button" data-filter="rifles" aria-pressed="false">Винтовки</button>
+        <button class="costume-filters__button" type="button" data-filter="knives" aria-pressed="false">Ножи</button>
+        <button class="costume-filters__button" type="button" data-filter="special" aria-pressed="false">Специальное</button>
+      </div>
+
+      <section class="arsenal-category" id="handguns" data-category="handguns" aria-labelledby="handguns-title">
+        <div class="arsenal-category__heading">
+          <p class="arsenal-category__eyebrow">Ближняя дистанция</p>
+          <h2 class="arsenal-category__title" id="handguns-title">Пистолеты</h2>
+        </div>
+        <div class="arsenal-grid">
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/SG-09_R_29.webp" alt="Пистолет SG-09 R">
+              <span class="costume-card__badge">Пистолет</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Стартовое оружие Леона</p>
+              <h3 class="costume-card__title">SG-09 R</h3>
+              <p class="costume-card__description">Пистолет, изготовленный специально для Леона. Он выглядит как обычный MUP, но каждый модуль был подобран вручную и обработан на станке для улучшения боевых качеств.</p>
+            </div>
+          </article>
+
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/Red9_29.webp" alt="Пистолет Red9">
+              <span class="costume-card__badge">Пистолет</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Находка в главе 4</p>
+              <h3 class="costume-card__title">Red9</h3>
+              <p class="costume-card__description">Мощный пистолет. На ручке выжжена большая красная цифра 9, чтобы стрелок не пытался зарядить его патронами другого калибра.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="arsenal-category" id="shotguns" data-category="shotguns" aria-labelledby="shotguns-title">
+        <div class="arsenal-category__heading">
+          <p class="arsenal-category__eyebrow">Остановка толпы</p>
+          <h2 class="arsenal-category__title" id="shotguns-title">Дробовики</h2>
+        </div>
+        <div class="arsenal-grid">
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/W-870.png" alt="Дробовик W-870">
+              <span class="costume-card__badge">Дробовик</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Находка в главе 1</p>
+              <h3 class="costume-card__title">W-870</h3>
+              <p class="costume-card__description">Помповый дробовик 12-го калибра. Снискал популярность за простоту в использовании и прочный стальной корпус.</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="arsenal-category" id="rifles" data-category="rifles" aria-labelledby="rifles-title">
+        <div class="arsenal-category__heading">
+          <p class="arsenal-category__eyebrow">Точный выстрел</p>
+          <h2 class="arsenal-category__title" id="rifles-title">Винтовки</h2>
+        </div>
+        <div class="arsenal-grid">
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/SR M1903.png" alt="Винтовка SR M1903">
+              <span class="costume-card__badge">Винтовка</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Доступна у торговца с главы 2</p>
+              <h3 class="costume-card__title">SR M1903</h3>
+              <p class="costume-card__description">Мощная винтовка с продольно-скользящим затвором. Особенно эффективна при попадании в уязвимые точки.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="arsenal-category" id="knives" data-category="knives" aria-labelledby="knives-title">
+        <div class="arsenal-category__heading">
+          <p class="arsenal-category__eyebrow">Последний рубеж</p>
+          <h2 class="arsenal-category__title" id="knives-title">Ножи</h2>
+        </div>
+        <div class="arsenal-grid">
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/combat knife.png" alt="Боевой нож Леона">
+              <span class="costume-card__badge">Нож</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Стартовое оружие Леона</p>
+              <h3 class="costume-card__title">Combat Knife</h3>
+              <p class="costume-card__description">Основной нож Леона и его надёжный инструмент для ближнего боя. Лезвие можно улучшать и ремонтировать.</p>
+            </div>
+          </article>
+
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/fighting knife.png" alt="Нож Fighting Knife">
+              <span class="costume-card__badge">Нож</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Награда за главу 14</p>
+              <h3 class="costume-card__title">Fighting Knife</h3>
+              <p class="costume-card__description">Фирменный нож Краузера, который Леон получает после схватки с ним. Бьёт сильнее стартового ножа.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="arsenal-category" id="special" data-category="special" aria-labelledby="special-title">
+        <div class="arsenal-category__heading">
+          <p class="arsenal-category__eyebrow">Особое снаряжение</p>
+          <h2 class="arsenal-category__title" id="special-title">Специальное оружие</h2>
+        </div>
+        <div class="arsenal-grid">
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/RPG-7.png" alt="Ручной противотанковый гранатомёт RPG-7">
+              <span class="costume-card__badge">Специальное</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Можно купить у торговца</p>
+              <h3 class="costume-card__title">RPG-7</h3>
+              <p class="costume-card__description">Одноразовый гранатомёт для нанесения огромного урона. Помогает быстро расправиться с особо сильными противниками.</p>
+            </div>
+          </article>
+
+          <article class="arsenal-card costume-card">
+            <div class="costume-card__image-wrap arsenal-card__image-wrap">
+              <img class="costume-card__image arsenal-card__image" src="images/weapon/Chemical flamethrower.png" alt="Химический огнемёт">
+              <span class="costume-card__badge">Специальное</span>
+            </div>
+            <div class="costume-card__content">
+              <p class="costume-card__game">Особое оружие</p>
+              <h3 class="costume-card__title">Chemical Flamethrower</h3>
+              <p class="costume-card__description">Огнемёт с резервуаром для химической смеси. Узнаваемый образец тяжёлого специального вооружения.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <div class="footer__brand-block">
+        <div class="logo footer__logo" aria-label="Логотип сайта">
+          <img src="images/umbrella-logo.png" alt="Логотип Леон С. Кеннеди Вики" class="logo__icon">
+          <div class="logo__text">
+            <span class="logo__title">ЛЕОН С. КЕННЕДИ | ВИКИ</span>
+            <span class="logo__subtitle">О мужчине мечты всех женщин мира</span>
+          </div>
+        </div>
+        <p class="footer__description">
+          Неформальная фан-энциклопедия по серии игр Resident Evil. Не связана с Capcom и не поддерживается ею.
+        </p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Навигация по сайту">
+        <a href="index.html">Главная</a>
+        <a href="biography.html">Биография</a>
+        <a href="costumes.html">Костюмы</a>
+        <a href="arsenal.html" aria-current="page">Арсенал</a>
+        <a href="relationships.html">Отношения</a>
+      </nav>
+
+      <div class="footer__contacts">
+        <p class="footer__contact-prompt">Нашли неточность или есть идея?<br>Пишите — дополним архив вместе</p>
+        <div class="footer__social-links" aria-label="Социальные сети">
+          <a class="footer__social-link" href="https://telegram.org/" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3.2 18.6 20c-.3 1.2-1 1.5-2 .9l-5.5-4.1-2.7 2.6c-.3.3-.6.6-1.2.6l.4-5.6L18 6.1c.4-.4-.1-.6-.6-.2L5.1 13.6l-5.3-1.7c-1.2-.4-1.2-1.2.3-1.8L20.8 2c1-.4 1.8.2 1.2 1.2Z"/></svg>
+          </a>
+          <a class="footer__social-link footer__social-link--vk" href="https://vk.com/" aria-label="ВКонтакте">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.1 18.5c-6.8 0-10.7-4.7-10.9-12.5h3.4c.1 5.7 2.6 8.1 4.5 8.6V6h3.2v4.9c1.9-.2 3.9-2.4 4.6-4.9h3.2c-.5 3.1-2.7 5.3-4.2 6.2 1.5.7 4 2.6 4.9 6.3h-3.5c-.7-2.4-2.5-4.2-5-4.5v4.5h-.2Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">&copy; 2026 НЕКОММЕРЧЕСКИЙ ФАН-АРХИВ ПО ВСЕЛЕННОЙ RESIDENT EVIL</span>
+    </div>
+  </footer>
+
+  <a href="#top" class="scroll-top-button" aria-label="Наверх">↑</a>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.arsenal-filters .costume-filters__button');
+    const weaponCategories = document.querySelectorAll('.arsenal-category');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((filterButton) => {
+          const isActive = filterButton === button;
+          filterButton.classList.toggle('is-active', isActive);
+          filterButton.setAttribute('aria-pressed', String(isActive));
+        });
+
+        weaponCategories.forEach((category) => {
+          category.hidden = filter !== 'all' && category.dataset.category !== filter;
+        });
+      });
+    });
+
+    const scrollTopButton = document.querySelector('.scroll-top-button');
+    const toggleScrollButton = () => {
+      scrollTopButton.classList.toggle('visible', window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', toggleScrollButton);
+    toggleScrollButton();
+  </script>
+</body>
+</html>
