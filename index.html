@@ -31,6 +31,7 @@
           <li class="main-navigation__item"><a href="costumes.html" class="main-navigation__link">Костюмы</a></li>
           <li class="main-navigation__item"><a href="arsenal.html" class="main-navigation__link">Арсенал</a></li>
           <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link">Отношения</a></li>
+          <li class="main-navigation__item"><a href="about.html" class="main-navigation__link">О проекте</a></li>
         </ul>
       </nav>
 
@@ -38,6 +39,11 @@
   </header>
 
   <main class="main-content">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item"><span aria-current="page">Главная</span></li>
+      </ol>
+    </nav>
 
     <!-- Вступление (Hero) -->
     <section class="introduction" id="intro">
@@ -72,6 +78,58 @@
             <li><strong>Появлений во франшизе:</strong> 15+ игр, фильмов и книг</li>
             <li><strong>Статус:</strong> Спецагент D.S.O.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="quotes-section" aria-labelledby="quotes-title">
+      <div class="quotes-section__header">
+        <h2 class="quotes-section__title" id="quotes-title">Цитаты</h2>
+      </div>
+
+      <div class="quote-carousel" role="region" aria-roledescription="карусель" aria-label="Цитаты Леона Кеннеди">
+        <div class="quote-carousel__track" tabindex="0" aria-label="Лента цитат">
+          <article class="quote-card">
+            <p class="quote-card__game">Resident Evil 4, 2004</p>
+            <blockquote class="quote-card__quote">«Где все? Ушли на бинго?»</blockquote>
+            <p class="quote-card__original"><em>Оригинал: «Where’s everyone going? Bingo?»</em></p>
+            <p class="quote-card__context"><strong>Контекст:</strong> Испанская деревня, 2004 год. Сразу после того, как толпа обезумевших жителей, пытавшаяся сжечь и зарубить Леона, внезапно бросает оружие и спокойно уходит на звон церковного колокола. Главная визитная карточка его чувства юмора.</p>
+          </article>
+
+          <article class="quote-card">
+            <p class="quote-card__game">Resident Evil 4 Remake, 2023</p>
+            <blockquote class="quote-card__quote">«В этот раз всё должно быть иначе.»</blockquote>
+            <p class="quote-card__original"><em>Оригинал: «This time, it has to be different.»</em></p>
+            <p class="quote-card__context"><strong>Контекст:</strong> Вступление ремейка RE4. Фраза показывает груз вины, который Леон несёт после катастрофы в Раккун-Сити в 1998 году: тогда он не смог спасти всех и теперь готов на всё, чтобы не допустить повторения трагедии.</p>
+          </article>
+
+          <article class="quote-card">
+            <p class="quote-card__game">Resident Evil 4 / Remake</p>
+            <blockquote class="quote-card__quote">«Слишком много болтаешь.»</blockquote>
+            <p class="quote-card__original"><em>Оригинал: «You talk too much.»</em></p>
+            <p class="quote-card__context"><strong>Контекст:</strong> Схватка на ножах с Джеком Краузером. Пока бывший командир читает Леону лекции о силе, предательстве и прошлом, Кеннеди сохраняет хладнокровие и парирует атаки короткими и жёсткими репликами.</p>
+          </article>
+
+          <article class="quote-card">
+            <p class="quote-card__game">Resident Evil 2, 1998</p>
+            <blockquote class="quote-card__quote">«Ада, стой!»</blockquote>
+            <p class="quote-card__original"><em>Оригинал: «Ada, wait!»</em></p>
+            <p class="quote-card__context"><strong>Контекст:</strong> Лаборатория под Раккун-Сити, 1998 год. Самая мемная и одновременно трагичная фраза молодого Леона, которая идеально описывает его многолетнюю историю взаимоотношений с Адой Вонг.</p>
+          </article>
+
+          <article class="quote-card">
+            <p class="quote-card__game">Resident Evil 4 Remake, 2023</p>
+            <blockquote class="quote-card__quote">«Двинешься ещё раз — и я проделаю в тебе ещё пару дыр.»</blockquote>
+            <p class="quote-card__context"><strong>Контекст:</strong> Леон произносит это, приставив нож к горлу Луиса Серы во время их первой встречи.</p>
+          </article>
+        </div>
+
+        <div class="quote-carousel__controls">
+          <p class="quote-carousel__position" aria-live="polite">1 / 5</p>
+          <div class="quote-carousel__buttons">
+            <button class="quote-carousel__button" type="button" data-direction="-1" aria-label="Предыдущая цитата" disabled>&larr;</button>
+            <button class="quote-carousel__button" type="button" data-direction="1" aria-label="Следующая цитата">&rarr;</button>
+          </div>
         </div>
       </div>
     </section>
@@ -169,30 +227,70 @@
         <a href="costumes.html">Костюмы</a>
         <a href="arsenal.html">Арсенал</a>
         <a href="relationships.html">Отношения</a>
+        <a href="about.html">О проекте</a>
       </nav>
 
       <div class="footer__contacts">
         <p class="footer__contact-prompt">Нашли неточность или есть идея?<br>Пишите — дополним архив вместе</p>
+        <a class="footer__email" href="mailto:leonwiki@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>leonwiki@gmail.com</a>
         <div class="footer__social-links" aria-label="Социальные сети">
-          <a class="footer__social-link" href="https://telegram.org/" aria-label="Telegram">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3.2 18.6 20c-.3 1.2-1 1.5-2 .9l-5.5-4.1-2.7 2.6c-.3.3-.6.6-1.2.6l.4-5.6L18 6.1c.4-.4-.1-.6-.6-.2L5.1 13.6l-5.3-1.7c-1.2-.4-1.2-1.2.3-1.8L20.8 2c1-.4 1.8.2 1.2 1.2Z"/></svg>
-          </a>
           <a class="footer__social-link footer__social-link--vk" href="https://vk.com/" aria-label="ВКонтакте">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.1 18.5c-6.8 0-10.7-4.7-10.9-12.5h3.4c.1 5.7 2.6 8.1 4.5 8.6V6h3.2v4.9c1.9-.2 3.9-2.4 4.6-4.9h3.2c-.5 3.1-2.7 5.3-4.2 6.2 1.5.7 4 2.6 4.9 6.3h-3.5c-.7-2.4-2.5-4.2-5-4.5v4.5h-.2Z"/></svg>
+          </a>
+          <a class="footer__social-link" href="https://telegram.org/" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 3.2 18.6 20c-.3 1.2-1 1.5-2 .9l-5.5-4.1-2.7 2.6c-.3.3-.6.6-1.2.6l.4-5.6L18 6.1c.4-.4-.1-.6-.6-.2L5.1 13.6l-5.3-1.7c-1.2-.4-1.2-1.2.3-1.8L20.8 2c1-.4 1.8.2 1.2 1.2Z"/></svg>
           </a>
         </div>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <span class="footer__copy">&copy; 2026 НЕКОММЕРЧЕСКИЙ ФАН-АРХИВ ПО ВСЕЛЕННОЙ RESIDENT EVIL</span>
+      <span class="footer__copy">&copy; 2026 ЛЕОН С. КЕННЕДИ | ВИКИ. Все права защищены.</span>
     </div>
   </footer>
 
-  <a href="#top" class="scroll-top-button" aria-label="Наверх">↑</a>
+  <a href="#top" class="scroll-top-button" aria-label="Наверх"><img src="images/umbrella-logo.png" alt="" class="scroll-top-button__icon"></a>
 
   <script>
     const scrollTopButton = document.querySelector('.scroll-top-button');
+    const quoteCarousel = document.querySelector('.quote-carousel');
+    const quoteTrack = quoteCarousel.querySelector('.quote-carousel__track');
+    const quoteCards = [...quoteTrack.querySelectorAll('.quote-card')];
+    const quotePosition = quoteCarousel.querySelector('.quote-carousel__position');
+    const quoteButtons = quoteCarousel.querySelectorAll('.quote-carousel__button');
+    let quoteScrollFrame;
+
+    const getQuoteIndex = () => {
+      const cardStep = quoteCards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(quoteTrack).columnGap);
+      return Math.min(quoteCards.length - 1, Math.round(quoteTrack.scrollLeft / cardStep));
+    };
+
+    const updateQuoteControls = () => {
+      const activeIndex = getQuoteIndex();
+      quotePosition.textContent = `${activeIndex + 1} / ${quoteCards.length}`;
+      quoteButtons.forEach((button) => {
+        button.disabled = activeIndex === (Number(button.dataset.direction) < 0 ? 0 : quoteCards.length - 1);
+      });
+    };
+
+    quoteTrack.addEventListener('scroll', () => {
+      cancelAnimationFrame(quoteScrollFrame);
+      quoteScrollFrame = requestAnimationFrame(updateQuoteControls);
+    }, { passive: true });
+
+    quoteButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextIndex = Math.max(0, Math.min(quoteCards.length - 1, getQuoteIndex() + Number(button.dataset.direction)));
+        const cardStep = quoteCards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(quoteTrack).columnGap);
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        quoteTrack.scrollTo({
+          left: nextIndex * cardStep,
+          behavior: reducedMotion ? 'instant' : 'smooth'
+        });
+      });
+    });
+
+    updateQuoteControls();
 
     const toggleScrollButton = () => {
       if (window.scrollY > 300) {
