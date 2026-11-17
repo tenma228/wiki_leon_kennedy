@@ -6,6 +6,7 @@
   <title>Леон С. Кеннеди Вики — О проекте</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/search.js" defer></script>
 </head>
 
 <body class="page page--interior" id="top">
@@ -28,6 +29,14 @@
           <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link">Отношения</a></li>
           <li class="main-navigation__item"><a href="about.html" class="main-navigation__link main-navigation__link--active" aria-current="page">О проекте</a></li>
         </ul>
+        <form class="site-search" role="search">
+          <label class="visually-hidden" for="site-search-input">Поиск по вики</label>
+          <input class="site-search__input" id="site-search-input" type="search" placeholder="Поиск по вики…" autocomplete="off" aria-controls="site-search-results">
+          <button class="site-search__button" type="button" aria-label="Открыть поиск" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          </button>
+          <div class="site-search__results" id="site-search-results" role="status" aria-live="polite" hidden></div>
+        </form>
       </nav>
     </div>
   </header>
@@ -66,7 +75,7 @@
         <h2 class="about-card__title">Технологии</h2>
         <p class="about-card__text">Проект построен как многостраничный сайт с адаптивной вёрсткой и единым визуальным стилем.</p>
         <ul class="about-card__list">
-          <li>HTML и CSS</li>
+          <li>HTML, CSS и JavaScript</li>
           <li>Git и GitHub</li>
         </ul>
       </article>
@@ -85,7 +94,6 @@
           <li>Анимация перелистывания цитат</li>
           <li>Дополнительные страницы арсенала и отношений</li>
           <li>Интерактивная полоса прогресса чтения</li>
-          <li>Быстрый поиск по сайту</li>
         </ul>
       </article>
 

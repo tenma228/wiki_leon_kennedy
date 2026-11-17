@@ -6,6 +6,7 @@
   <title>Леон С. Кеннеди Вики — Отношения</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/search.js" defer></script>
 </head>
 
 <body class="page page--interior" id="top">
@@ -28,6 +29,14 @@
           <li class="main-navigation__item"><a href="relationships.html" class="main-navigation__link main-navigation__link--active" aria-current="page">Отношения</a></li>
           <li class="main-navigation__item"><a href="about.html" class="main-navigation__link">О проекте</a></li>
         </ul>
+        <form class="site-search" role="search">
+          <label class="visually-hidden" for="site-search-input">Поиск по вики</label>
+          <input class="site-search__input" id="site-search-input" type="search" placeholder="Поиск по вики…" autocomplete="off" aria-controls="site-search-results">
+          <button class="site-search__button" type="button" aria-label="Открыть поиск" aria-expanded="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          </button>
+          <div class="site-search__results" id="site-search-results" role="status" aria-live="polite" hidden></div>
+        </form>
       </nav>
     </div>
   </header>
@@ -191,16 +200,53 @@
     if (relationshipCarousel) {
       const relationshipSlides = [...relationshipCarousel.querySelectorAll('.relationship-slide')];
       const relationshipPosition = relationshipCarousel.querySelector('.relationship-carousel__position');
+      const relationshipButtons = [...relationshipCarousel.querySelectorAll('.relationship-carousel__button')];
       let activeRelationshipIndex = 0;
+      let isTransitioning = false;
 
-      relationshipCarousel.querySelectorAll('.relationship-carousel__button').forEach((button) => {
+      relationshipButtons.forEach((button) => {
         button.addEventListener('click', () => {
+          if (isTransitioning) return;
+
           const direction = Number(button.dataset.direction);
-          activeRelationshipIndex = (activeRelationshipIndex + direction + relationshipSlides.length) % relationshipSlides.length;
-          relationshipSlides.forEach((slide, index) => {
-            slide.hidden = index !== activeRelationshipIndex;
-          });
+          const nextIndex = (activeRelationshipIndex + direction + relationshipSlides.length) % relationshipSlides.length;
+          const currentSlide = relationshipSlides[activeRelationshipIndex];
+          const nextSlide = relationshipSlides[nextIndex];
+          const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+          activeRelationshipIndex = nextIndex;
           relationshipPosition.textContent = `${activeRelationshipIndex + 1} / ${relationshipSlides.length}`;
+
+          if (reducedMotion) {
+            currentSlide.hidden = true;
+            nextSlide.hidden = false;
+            return;
+          }
+
+          isTransitioning = true;
+          relationshipButtons.forEach((relationshipButton) => {
+            relationshipButton.disabled = true;
+          });
+          nextSlide.hidden = false;
+          nextSlide.setAttribute('aria-hidden', 'true');
+          const transitionDirection = direction > 0 ? 'next' : 'previous';
+          currentSlide.dataset.transition = transitionDirection;
+          nextSlide.dataset.transition = transitionDirection;
+          currentSlide.classList.add('is-leaving');
+          nextSlide.classList.add('is-entering');
+
+          nextSlide.addEventListener('animationend', () => {
+            currentSlide.hidden = true;
+            currentSlide.classList.remove('is-leaving');
+            nextSlide.classList.remove('is-entering');
+            delete currentSlide.dataset.transition;
+            delete nextSlide.dataset.transition;
+            nextSlide.removeAttribute('aria-hidden');
+            relationshipButtons.forEach((relationshipButton) => {
+              relationshipButton.disabled = false;
+            });
+            isTransitioning = false;
+          }, { once: true });
         });
       });
     }
